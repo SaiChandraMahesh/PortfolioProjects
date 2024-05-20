@@ -5,6 +5,7 @@ where continent is not null
 order by 3,4
 
 select * from CovidVaccinations
+where continent is not null
 order by 3,4
 
 -- select dataa that we are going to be using
@@ -14,10 +15,12 @@ location, date,population, total_cases, new_cases, total_deaths,
 (total_deaths/total_cases)*100 as DeathPercentage
 from CovidDeaths
 where location like '%state%'
+and continent is not null
 order by 1,2
 
 
 select distinct location from CovidDeaths
+and continent is not null
 order by 1
 
 -- total cases vs population
